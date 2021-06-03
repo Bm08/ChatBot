@@ -1,0 +1,224 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- ask_topic:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- python:
+    use_entities: true
+- MySql:
+    use_entities: true
+- Tableau:
+    use_entities: true
+- DataScience:
+    use_entities: true
+- AI:
+    use_entities: true
+- spark:
+    use_entities: true
+- hadoop:
+    use_entities: true
+- azure:
+    use_entities: true
+- IOT:
+    use_entities: true
+- ML:
+    use_entities: true
+- DL:
+    use_entities: true
+- BS:
+    use_entities: true
+- hypothesis:
+    use_entities: true
+- SLR:
+    use_entities: true
+- MLR:
+    use_entities: true
+- LR:
+    use_entities: true
+- clustering:
+    use_entities: true
+- PCA:
+    use_entities: true
+- AR:
+    use_entities: true
+- RS:
+    use_entities: true
+- TM:
+    use_entities: true
+- NB:
+    use_entities: true
+- KNN:
+    use_entities: true
+- DTrees:
+    use_entities: true
+- RForests:
+    use_entities: true
+- NN:
+    use_entities: true
+- SVM:
+    use_entities: true
+- Forecasting:
+    use_entities: true
+- Aexcelr:
+    use_entities: true
+- R:
+    use_entities: true
+- query_resource_type:
+    use_entities: true
+- ask_document:
+    use_entities: true
+entities:
+- resource_type
+- document_topic
+slots:
+  resource_type:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_python:
+  - text: Python is a popular programming language. It was created by Guido van Rossum, and released in 1991. It is used for:- web development (server-side), software development, mathematics, system scripting.
+  - text: Python can be used on a server to create web applications. Python can be used alongside software to create workflows. Python can connect to database systems. It can also read and modify files. Python can be used to handle big data and perform complex mathematics. Python can be used for rapid prototyping, or for production-ready software development.
+  - text: Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). Python has a simple syntax similar to the English language. Python has syntax that allows developers to write programs with fewer lines than some other programming languages. Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. Python can be treated in a procedural way, an object-oriented way or a functional way.
+  utter_R:
+  - text: This should be an easy one for data science job applicants. R is an open-source language and environment for statistical computing and analysis, or for our purposes, data science.
+  utter_MySql:
+  - text: MySQL is an open source DBMS which is built, supported and distributed by MySQL AB (now acquired by Oracle)
+  utter_Tableau:
+  - text: Tableau is the powerful and fastest visualizing tool which is used in the Business Intelligence(BI) Industry. It simplifies the raw data into an understandable format. Analysis of the data becomes faster with Tableau. The visualizations can be created in the form of dashboards. The visualizations or diagrammatic representation of data can easily be understood by the employees of the organizations who are at different levels.
+  utter_DataScience:
+  - text: Data Science is a field of computer science that explicitly deals with turning data into information and extracting meaningful insights out of it. The reason why Data Science is so popular is that the kind of insights it allows us to draw from the available data has led to some major innovations in several products and companies. Using these insights, we are able to determine the taste of a particular customer, the likelihood of a product succeeding in a particular market, etc.
+  utter_AI:
+  - text: AI can be described as an area of computer science that simulates human intelligence in machines. It’s about smart algorithms making decisions based on the available data.
+          Whether it’s Amazon’s Alexa or a self-driving car, the goal is to mimic human intelligence at lightning speed (and with a reduced rate of error).
+  utter_spark:
+  - text: ok
+  utter_hadoop:
+  - text: ok
+  utter_azure:
+  - text: It is the use of servers on the internet to “store”, “manage” and “process” data. The difference is, instead of using your own servers, you are using someone else’s servers to do your task, paying them for the amount of time you use it for.
+          As discussed above, the companies which provide the cloud service are called the Cloud Providers. There are a lot of cloud providers out there, out of them one is Microsoft Azure. It is used for accessing Microsoft’s infrastructure for cloud.
+  utter_IOT:
+  - text: Internet of Things (IoT) is a network of physical objects or people called "things" that are embedded with software, electronics, network, and sensors that allow these objects to collect and exchange data. The goal of IoT is to extend to internet connectivity from standard devices like computer, mobile, tablet to relatively dumb devices like a toaster.
+  utter_ML:
+  - text: :- Machine learning is the science of getting computers to act without being explicitly programmed. Machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome. It is so widespread that unknowingly we use it many a times in our daily life.
+  utter_DL:
+  - text: ok
+  utter_BS:
+  - text: ok
+  utter_hypothesis:
+  - text: It is the way of testing results of an experiment whether they are valid and meaningful and have not occured just by chance. If the results have happened just by chance then the experiment cannot be repeated and is not reusable.
+  utter_SLR:
+  - text: ok
+  utter_MLR:
+  - text: ok
+  utter_LR:
+  - text: Logistic Regression often referred as logit model is a technique to predict the binary outcome from a linear combination of predictor variables. For example, if you want to predict whether a particular political leader will win the election or not. In this case, the outcome of prediction is binary i.e. 0 or 1 (Win/Lose). The predictor variables here would be the amount of money spent for election campaigning of a particular candidate, the amount of time spent in campaigning, etc.
+  utter_clustering:
+  - text: Our entire population is divided into clusters or sections and then the clusters are randomly selected. All the elements of the cluster are used for sampling. Clusters are identified using details such as age, sex, location etc. Single Stage Cluster Sampling or Two Stage Cluster Sampling can be used to performm Cluster Sampling
+  utter_PCA:
+  - text: PCA is a method for transforming features in a dataset by combining them into uncorrelated linear combinations. These new features, or principal components, sequentially maximize the variance represented (i.e. the first principal component has the most variance, the second principal component has the second most, and so on). As a result, PCA is useful for dimensionality reduction because you can set an arbitrary variance cutoff.
+  utter_AR:
+  - text: Association rule finds interesting association or correlation relationships among a large set of data items which is used for decision-making processes. Association rules analyzes buying patterns that are frequently associated or purchased together.
+  utter_RS:
+  - text: A subclass of information filtering systems that are meant to predict the preferences or ratings that a user would give to a product. Recommender systems are widely used in movies, news, research articles, products, social tags, music, etc.
+  utter_TM:
+  - text: ok
+  utter_NB:
+  - text: naive Bayes is so ‘naive’ because it assumes that all of the features in a data set are equally important and independent. As we know, these assumption are rarely true in real world scenario.
+  utter_KNN:
+  - text: K Nearest Neighbors - Classification
+K nearest neighbors is a simple algorithm that stores all available cases and classifies new cases based on a similarity measure (e.g., distance functions). KNN has been used in statistical estimation and pattern recognition already in the beginning of 1970’s as a non-parametric technique. 
+  utter_DTrees:
+  - text: Decision Tree is a superised machine learning algorithm used for classification and regression analysis. It is a tree-like structure in which internal node represents test on an attribute, each branch represents outcome of test and each leafe node represents class label.
+          It is a flow-chart like tree structure, where each internal node denotes a test on an attribute, each branch represents an outcome of the test, and leaf nodes represent classes or class distributions. Decision tree is a predictive model. Each branch of the tree is a classification question and leaves of the tree are partition of the dataset with their classification.
+  utter_RForests:
+  - text: Random Forest is an Ensemble Classifer. As opposed to building a single decision tree, random forest builds many decision trees and combines the output of all the decision trees to give a stable output.
+  utter_NN:
+  - text: Neural Network is a supervised machine learning algorithm which is inspired by human nervous system and it replicates the similar to how human brain is trained. It consists of Input Layers, Hidden Layers, & Output Layers.
+  utter_SVM:
+  - text: Here we plot each data point in n-dimensional space with the value of each dimension being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiate the classes very well
+  utter_Forecasting:
+  - text: Forecasting is to predict or estimate (a future event or trend). 
+          For businesses and analysts forecasting is determining what is going to happen in the future by analyzing what happened in the past and what is going on now
+  utter_Aexcelr:
+  - text: ok
+  utter_asktopic:
+  - buttons:
+    - payload: /inform{resource_type:"python"}
+      title: python
+    - payload: /inform{resource_type:"r"}
+      title: r
+    - payload: /inform{resource_type:"mysql"}
+      title: mysql
+    - payload: /inform{resource_type:"tableau"}
+      title: tableau
+    - payload: /inform{resource_type:"artificial intellegence"}
+      title: artificial intellegence
+    - payload: /inform{resource_type:"ai"}
+      title: ai
+    - payload: /inform{resource_type:"Data Science"}
+      title: Data Science
+    - payload: /inform{resource_type:"hypothesis"}
+      title: hypothesis
+    - payload: /inform{resource_type:"clustering"}
+      title: clustering
+    - payload: /inform{resource_type:"pca"}
+      title: pca
+    - payload: /inform{resource_type:"association rules"}
+      title: Association Rules
+    - payload: /inform{resource_type:"decision tree"}
+      title: Decision Tree
+    - payload: /inform{resource_type:"azure"}
+      title: azure
+    - payload: /inform{resource_type:"basic statistics"}
+      title: Basic Statistics
+    - payload: /inform{resource_type:"deep learning"}
+      title: Deep Learning
+    - payload: /inform{resource_type:"iot"}
+      title: IOT
+    - payload: /inform{resource_type:"knn"}
+      title: KNN
+    - payload: /inform{resource_type:"dataanalysis"}
+      title: Data Analysis
+    - payload: /inform{resource_type:"forecasting"}
+      title: Forecasting
+    text: You can download document, Please select topic on which you are willing to explore more.
+  utter_make_it_better:
+  - text: Apologies! I am still learning and will Improve myself!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- query_resource_type
+forms: {}
+e2e_actions: []
