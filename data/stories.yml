@@ -1,0 +1,307 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: topic
+  steps:
+  - intent: ask_topic
+  - action: utter_asktopic
+
+- story: asking for document (query)
+  steps:
+  - intent: ask_document
+  - slot_was_set:
+    - resource_type: "python"
+  - action: query_resource_type
+
+- story: python
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: python
+  - action: utter_python
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: r
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: R
+  - action: utter_R
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: mysql
+  steps:
+  - intent: MySql
+  - action: utter_MySql
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: tableau
+  steps:
+  - intent: Tableau
+  - action: utter_Tableau
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: datascience
+  steps:
+  - intent: DataScience
+  - action: utter_DataScience
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: ai
+  steps:
+  - intent: AI
+  - action: utter_AI
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: spark
+  steps:
+  - intent: spark
+  - action: utter_spark
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: hadoop
+  steps:
+  - intent: hadoop
+  - action: utter_hadoop
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: azure
+  steps:
+  - intent: azure
+  - action: utter_azure
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: iot
+  steps:
+  - intent: IOT
+  - action: utter_IOT
+  - action: utter_did_that_help
+  - intent: deny
+  - - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: ml
+  steps:
+  - intent: ML
+  - action: utter_ML
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: dl
+  steps:
+  - intent: DL
+  - action: utter_DL
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: bs
+  steps:
+  - intent: BS
+  - action: utter_BS
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: hypothesis
+  steps:
+  - intent: hypothesis
+  - action: utter_hypothesis
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: slr
+  steps:
+  - intent: SLR
+  - action: utter_SLR
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: mlr
+  steps:
+  - intent: MLR
+  - action: utter_MLR
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: lr
+  steps:
+  - intent: LR
+  - action: utter_LR
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: clustering
+  steps:
+  - intent: clustering
+  - action: utter_clustering
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: pca
+  steps:
+  - intent: PCA
+  - action: utter_PCA
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: ar
+  steps:
+  - intent: AR
+  - action: utter_AR
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: rs
+  steps:
+  - intent: RS
+  - action: utter_RS
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: tm
+  steps:
+  - intent: TM
+  - action: utter_TM
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: nb
+  steps:
+  - intent: NB
+  - action: utter_NB
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: knn
+  steps:
+  - intent: KNN
+  - action: utter_KNN
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: dtrees
+  steps:
+  - intent: DTrees
+  - action: utter_DTrees
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: rforests
+  steps:
+  - intent: RForests
+  - action: utter_RForests
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: nn
+  steps:
+  - intent: NN
+  - action: utter_NN
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: svm
+  steps:
+  - intent: SVM
+  - action: utter_SVM
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic
+
+- story: forecasting
+  steps:
+  - intent: Forecasting
+  - action: utter_Forecasting
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_make_it_better
+  - action: utter_asktopic

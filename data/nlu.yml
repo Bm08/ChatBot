@@ -1,0 +1,300 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: ask_topic
+  examples: |
+    - i want more information
+    - give me more information 
+    - i want to know more 
+    - please tell more about
+    - i am not satisfied with the answers
+
+- intent: ask_document
+  examples: |
+    - i want [python](document_topic) document.
+    - i want document on [python](document_topic).
+    - i want [mysql](document_topic) document.
+    - i want document on [mysql](document_topic).
+    - i want [r](document_topic) document.
+    - i want document on [r](document_topic).
+    - i want [tableau](document_topic) document.
+    - i want document on [tableau](document_topic).
+    - i want [artificial intellegence](document_topic) document.
+    - i want document on [artificial intellegence](document_topic).
+    - i want [ai](document_topic) document.
+    - i want document on [ai](document_topic).
+    - i want [Data Science](document_topic) document.
+    - i want document on [Data Science](document_topic).
+    - i want [hypothesis](document_topic) document.
+    - i want document on [hypothesis](document_topic).
+    - i want [clustering](document_topic) document.
+    - i want document on [clustering](document_topic).
+    - i want [pca](document_topic) document.
+    - i want document on [pca](document_topic).
+    - i want [principal component analysis](document_topic) document.
+    - i want document on [principal component analysis](document_topic).
+    - i want [association rules](document_topic) document.
+    - i want document on [association rules](document_topic).
+    - i want [decision tree](document_topic) document.
+    - i want document on [decision tree](document_topic).
+    - i want [azure](document_topic) document.
+    - i want document on [azure](document_topic).
+    - i want [basic statistics](document_topic) document.
+    - i want document on [basic statistics](document_topic).
+    - i want [deep learning](document_topic) document.
+    - i want document on [deep learning](document_topic).
+    - i want [internet of things](document_topic) document.
+    - i want document on [internet of things](document_topic).
+    - i want [iot](document_topic) document.
+    - i want document on [iot](document_topic).
+    - i want [knn](document_topic) document.
+    - i want document on [knn](document_topic).
+    - i want [K-nearest neighbors](document_topic) document.
+    - i want document on [K-nearest neighbors](document_topic).
+    - i want [data analysis](document_topic) document.
+    - i want document on [data analysis](document_topic).
+    - i want [forecasting](document_topic) document.
+    - i want document on [forecasting](document_topic).
+    
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: python
+  examples: |
+    - what is python?
+    - tell me something about python?
+    - give details of python.
+    - python
+
+- intent: R
+  examples: |
+    - Packages to read excel files in R?
+    - R Language
+    - what is R?
+    - What is the use of set.seed() function ?
+    - What is the r function to know the number of observations for the levels of a variable?
+    - What is the r function to know the persentae of observations for the levels of a variable?
+    - Difference between lapply & sapply function?
+    - Functions to find row & column count in R?
+    - 
+- intent: MySql
+  examples: |
+    - what is mySQL
+    - mysql
+    - MySql
+    - My SQL
+    - tell me about mysql
+    - benefits of mysql
+
+- intent: Tableau
+  examples: |
+    - 
+- intent: DataScience
+  examples: |
+    -
+- intent: AI
+  examples: |
+    -
+- intent: spark
+  examples: |
+    -
+- intent: hadoop
+  examples: |
+    -
+- intent: azure
+  examples: |
+    -
+- intent: IOT
+  examples: |
+    -
+- intent: ML
+  examples: |
+    - What is Machine Learning?
+    - Machine Learning
+    - ML
+
+- intent: DL
+  examples: |
+    -
+- intent: BS
+  examples: |
+    - What are the classifications of data types in Statistics?
+    - What is the difference between a nominal and an ordinal data type?
+    - How is Interval data type different from Ratio?
+
+- intent: hypothesis
+  examples: |
+    - What do you mean by Hypothesis Testing?
+    - What is Null Hypothesis in Hypothesis Testing?
+    - hypothesis
+    - What'S the difference between Type I and Type II error in hypothesis?
+    - What is A/B Testing?
+
+- intent: SLR
+  examples: |
+    -
+- intent: MLR
+  examples: |
+    -
+- intent: LR
+  examples: |
+    - What is logistic regression? Or State an example when you have used logistic regression recently?
+    - What is logistic regression?
+    - logistics regression
+
+- intent: clustering
+  examples: |
+    - What is Cluster Sampling?
+    - what is clustering?
+    - clustering
+    
+- intent: PCA
+  examples: |
+    - pca 
+    - principle component analysis
+    - Explain Principle Component Analysis (PCA).
+
+- intent: AR
+  examples: |
+    -
+- intent: RS
+  examples: |
+    - What are Recommender Systems?
+    - recommendation system
+    - recommender system
+
+- intent: TM
+  examples: |
+    -
+- intent: NB
+  examples: |
+    - What is Bayes' Theorem?
+    - What is the assumption of Naive Bayes Classifier?
+    - Niave bayes
+    - Why is naive Bayes so "naive's" ?
+
+- intent: KNN
+  examples: |
+    - Why is KNN called as non-parametric algorithm?
+    - Why is KNN called as Lazy Algorithm?
+    - How do we choose the value of K in KNN algorithm?
+    - Function in R to employ KNN?
+    - knn
+    - what is k-Nearest Neighbour Algorithm?
+
+- intent: DTrees
+  examples: |
+    - What is a decision tree?
+    - What are rules in decision tree?
+    - Explain different types of nodes in nodes in decision tree and how are they selected.
+    - decision tree
+
+- intent: RForests
+  examples: |
+    - What is Random Forest?
+    - What is the limitation of Random Forest?
+    - random forest
+
+- intent: NN
+  examples: |
+    - What is a Neural Network?
+    - nueral network
+    - What are the advantages and disadvantages of neural networks?
+
+- intent: SVM
+  examples: |
+    - What is SVM?
+    - What are the tuning parameters of SVM?
+    - Explain Kernel in SVM?
+
+- intent: Forecasting
+  examples: |
+    -
+- intent: Aexcelr
+  examples: |
+    -
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
